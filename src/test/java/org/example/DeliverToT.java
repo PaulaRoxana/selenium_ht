@@ -1,6 +1,5 @@
 package org.example;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
@@ -8,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.time.Duration;
+
+import static org.example.PageObjects.*;
 
 public class DeliverToT {
     private WebDriver driver;
@@ -17,74 +18,56 @@ public class DeliverToT {
                 "C:\\Users\\Tamas_Demeny\\IdeaProjects\\selenium_ht\\src\\test\\resources\\webdriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com/");
-        WebElement deliverToButton = driver.findElement(
-                By.xpath("//span[contains(text(),\"Deliver to\")]"));
-        deliverToButton.click();
+        driver.findElement(DELIVER_TO_BUTTON).click();
     }
 
     @Test
     public void deliverToZipCode(){
 
         WebElement zipCodeField = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//input[@id=\"GLUXZipUpdateInput\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(ZIP_CODE_FIELD));
         zipCodeField.sendKeys("06103");
 
         WebElement applyButton = new WebDriverWait(driver, Duration.ofSeconds(2))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[@data-action=\"GLUXPostalUpdateAction\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(APPLY_BUTTON));
         applyButton.click();
 
-
         WebElement continueButton = new WebDriverWait(driver, Duration.ofSeconds(2))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//div[@class=\"a-popover-footer\"]//input")));
+                .until(ExpectedConditions.visibilityOfElementLocated(CONTINUE_BUTTON));
         continueButton.click();
 
         WebElement newLocation = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[contains(text(),\"Hartford 06103\u200C\")]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(NEW_LOCATION));
         Assert.assertEquals(newLocation.getText(), "Hartford 06103\u200C");
     }
 
     @Test
     public void deliverToPoland(){
         WebElement listDropDown = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[@role=\"radiogroup\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(LIST_DROP_DOWN));
         listDropDown.click();
 
         WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//*[@id=\"GLUXCountryList_178\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(POLAND_OPTION));
         Assert.assertEquals(polandOption.getText(), "Poland", "Poland was not found!");
 
         polandOption.click();
-        driver.findElement(By.xpath("//button[@name=\"glowDoneButton\"]")).click();
+        driver.findElement(DONE).click();
 
-        WebElement polandDeliverChanged= new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[@id=\"glow-ingress-line2\"]")));
-
-        while(!polandDeliverChanged.getText().contains("Poland")){
-            polandDeliverChanged = new WebDriverWait(driver, Duration.ofSeconds(20))
-                    .until(ExpectedConditions.visibilityOfElementLocated(
-                            By.xpath("//span[@id=\"glow-ingress-line2\"]")));
-        }
+        //wait for the page to update
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.visibilityOfElementLocated(UPDATED_DELIVER_TO));
 
         WebElement keyboardCategory = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[text()='Keyboards']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(KEYBOARD_CATEGORY));
         keyboardCategory.click();
 
         WebElement keyboard = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//img[starts-with(@alt,\"Sponsored Ad - Fiodio R\")]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(FIODIO_KEYBOARD));
         keyboard.click();
 
         WebElement shipToPoland = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[contains(text(),\"No \")]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(SHIP_TO_POLAND));
         Assert.assertTrue(shipToPoland.getText().contains("Poland"),
                 "Result is false, which means that the shipping is not to Poland");
     }

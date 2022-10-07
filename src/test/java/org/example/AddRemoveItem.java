@@ -1,6 +1,5 @@
 package org.example;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
@@ -8,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.time.Duration;
+
+import static org.example.PageObjects.*;
 
 public class AddRemoveItem {
     private WebDriver driver;
@@ -18,31 +19,24 @@ public class AddRemoveItem {
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com/");
 
-        WebElement keyboardCategory = driver.findElement(
-                By.xpath("//img[@alt=\"Keyboards\"]"));
-        keyboardCategory.click();
+        driver.findElement(KEYBOARD_CATEGORY).click();
 
-        WebElement selectedKeyboard = driver.findElement(
-                By.xpath("//img[starts-with(@alt,\"Redragon S101\")]"));
-        selectedKeyboard.click();
+        driver.findElement(REDRAGON_KEYBOARD).click();
 
         WebElement addToCart = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//input[@id=\"add-to-cart-button\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART));
         addToCart.click();
     }
 
     @Test
     public void addToCartFunctionality(){
         WebElement addedToCartMessage = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[contains(text(),\"Added to Cart\")]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(ADDED_TO_CART_MESSAGE));
         Assert.assertEquals(addedToCartMessage.getText(),"Added to Cart",
                 "The message \"Added to Cart\" did not appear!");
 
         WebElement amountOfProductInCart = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[@id=\"nav-cart-count\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(AMOUNT_OF_PRODUCT_IN_CART));
         Assert.assertEquals(amountOfProductInCart.getText(), "1",
                 "The amount of products in cart should be 1!");
     }
@@ -50,24 +44,19 @@ public class AddRemoveItem {
     @Test
     public void removeFromCart(){
         WebElement amountOfProductInCart = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//span[@id=\"nav-cart-count\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(AMOUNT_OF_PRODUCT_IN_CART));
         amountOfProductInCart.click();
 
         WebElement deleteFromCartButton = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//input[@value=\"Delete\"]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(DELETE_FROM_CART_BUTTON));
         deleteFromCartButton.click();
 
         WebElement cartEmptyMessage = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//h1[contains(text(),\"Your Amazon Cart is empty.\")]")));
+                .until(ExpectedConditions.visibilityOfElementLocated(CART_EMPTY_MESSAGE));
         Assert.assertEquals(cartEmptyMessage.getText(), "Your Amazon Cart is empty.",
                 "The message \"Your Amazon Cart is empty.\" did not appear!");
 
-        WebElement priceIsZero = driver.findElement(
-                By.xpath("//span[contains(text(),\"$0.00\")]"));
-        Assert.assertEquals(priceIsZero.getText(), "$0.00",
+        Assert.assertEquals(driver.findElement(PRICE_IS_ZERO).getText(),"$0.00",
                 "The payable amount did not go down to $0!");
     }
 
