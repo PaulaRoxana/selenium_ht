@@ -23,9 +23,9 @@ public class AddRemoveItem {
 
         driver.findElement(REDRAGON_KEYBOARD).click();
 
-        WebElement addToCart = new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART));
-        addToCart.click();
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART))
+                .click();
     }
 
     @Test
