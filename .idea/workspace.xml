@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DeliverToFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SearchFieldFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliverToFunctionalityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SearchFieldFunctionalityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/webdriver/chromedriver.exe" afterDir="false" />
+    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit searchField_and_deliverTo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DeliverToFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DeliverToFunctionality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliverToFunctionalityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliverToFunctionalityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SearchFieldFunctionalityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SearchFieldFunctionalityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +57,8 @@
       <recent name="C:\Users\Paula_Girdea\IdeaProjects\selenium_ht\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchFieldFunctionalityTest">
-    <configuration name="DeliverToFunctionalityTest.verifyThatDeliverToValueIsUpdated" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SearchFieldFunctionalityTest.checkFoundElementsContainSearchedInfo">
+    <configuration name="DeliverToFunctionalityTest.checkCountriesListContainsPoland" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
         <pattern>
@@ -70,7 +68,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliverToFunctionalityTest" />
-      <option name="METHOD_NAME" value="verifyThatDeliverToValueIsUpdated" />
+      <option name="METHOD_NAME" value="checkCountriesListContainsPoland" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -78,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchFieldFunctionalityTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliverToFunctionalityTest.checkShippingToCountry" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
         <pattern>
@@ -87,8 +85,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SearchFieldFunctionalityTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliverToFunctionalityTest" />
+      <option name="METHOD_NAME" value="checkShippingToCountry" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -151,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchFieldFunctionalityTest" />
-        <item itemvalue="TestNG.DeliverToFunctionalityTest.verifyThatDeliverToValueIsUpdated" />
         <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkFoundElementsContainSearchedInfo" />
         <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkResultsForCorrectInfoInSearchField" />
         <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkNoResultsForIncorrectInfoInSearchField" />
+        <item itemvalue="TestNG.DeliverToFunctionalityTest.checkShippingToCountry" />
+        <item itemvalue="TestNG.DeliverToFunctionalityTest.checkCountriesListContainsPoland" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664969593690</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit searchField_and_deliverTo">
+      <created>1665393379403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665393379403</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +213,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit searchField_and_deliverTo" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit searchField_and_deliverTo" />
   </component>
 </project>

@@ -22,7 +22,7 @@ public class DeliverToFunctionalityTest {
 
 
     @BeforeMethod
-    public void setUpDriver() {//initialize our web-driver
+    public void setUpDriver() {
         System.setProperty("webdriver.chrome.driver",
                 "C:\\Users\\Paula_Girdea\\IdeaProjects\\selenium_ht\\src\\test\\resources\\webdriver\\chromedriver.exe");
 
@@ -35,8 +35,6 @@ public class DeliverToFunctionalityTest {
 
     @Test
     public void verifyThatDeliverToValueIsUpdated() {
-        driver.get("https://www.amazon.com/");
-        driver.manage().window().maximize();
 
         driver.findElement(deliverToButton).click();
 
@@ -48,7 +46,7 @@ public class DeliverToFunctionalityTest {
                 .until(ExpectedConditions.presenceOfElementLocated(continueButton))
                 .click();
 
-        WebElement destinationBtn = new WebDriverWait(driver, Duration.ofSeconds(2))
+        WebElement destinationBtn = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(destinationButton));
 
         Assert.assertEquals(destinationBtn.getText(), updatedDestination,
@@ -81,7 +79,7 @@ public class DeliverToFunctionalityTest {
 
 
     @Test
-    public void checkShippingToCountry() throws InterruptedException /*throws InterruptedException */ {
+    public void checkShippingToCountry() {
 
         driver.get("https://www.amazon.com/");
         driver.manage().window().maximize();
@@ -91,7 +89,7 @@ public class DeliverToFunctionalityTest {
                 .until(ExpectedConditions.presenceOfElementLocated(dropdownButton))
                 .click();
 
-        WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(3))
+        WebElement polandOption = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(Poland));
         polandOption.click();
 

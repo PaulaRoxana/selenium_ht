@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 
 public class DeliverToFunctionality {
 
- //verifyThatDeliverToValueIsUpdated
-
  public static final By deliverToButton = By.cssSelector("#glow-ingress-line1");
  public static final By zipCodeField = By.id("GLUXZipUpdateInput");
  public static final By applyButton = By.xpath("//span[@id = 'GLUXZipUpdate']//input");
@@ -17,7 +15,6 @@ public class DeliverToFunctionality {
  public static final By dropdownButton = By.xpath("//span[@role='radiogroup']");
  public static final By Poland = By.xpath("//a[@id='GLUXCountryList_178']");
 
- //checkShippingToCountry
  public static final String shipToCountry = "Poland";
  public static final By doneButton = By.xpath("//button[@name='glowDoneButton']");
  //public static final By doneButton = By.xpath("//span//button[text()= 'Done']");
