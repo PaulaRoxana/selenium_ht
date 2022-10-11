@@ -22,7 +22,7 @@ public class SearchFieldFunctionalityTest {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUpDriver() {//initialize our web-driver
+    public void setUpDriver() {
         System.setProperty("webdriver.chrome.driver",
                 "C:\\Users\\Paula_Girdea\\IdeaProjects\\selenium_ht\\src\\test\\resources\\webdriver\\chromedriver.exe");
 
