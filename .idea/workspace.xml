@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit" />
+    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit FilterAndSearchingFunctionalityTests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HeadphonesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/modules/NavBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FilterAndSearchingPageObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +59,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ASDeliverFunctionality.checkShippingToCountry">
+  <component name="RunManager" selected="TestNG.FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest">
     <configuration name="ASDeliverFunctionality.checkCountriesListContainsPoland" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
@@ -106,24 +114,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ASDeliverFunctionality.deliverToZipCode" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_ht" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ASDeliverFunctionality" />
-      <option name="METHOD_NAME" value="deliverToZipCode" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ASDeliverFunctionality.verifyThatDeliverToValueIsUpdated" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
@@ -142,13 +132,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_ht" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FilterAndSearchingFunctionalityTests" />
+      <option name="METHOD_NAME" value="filteringAndSearchFunctionalityFirstTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest" />
         <item itemvalue="TestNG.ASDeliverFunctionality.checkShippingToCountry" />
         <item itemvalue="TestNG.ASDeliverFunctionality.checkCountriesListContainsPoland" />
         <item itemvalue="TestNG.ASDeliverFunctionality.verifyThatDeliverToValueIsUpdated" />
         <item itemvalue="TestNG.ASDeliverFunctionality.deliverToPoland" />
-        <item itemvalue="TestNG.ASDeliverFunctionality.deliverToZipCode" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664969346989</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit FilterAndSearchingFunctionalityTests">
+      <created>1665396469690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665396469690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +207,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="commit FilterAndSearchingFunctionalityTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit FilterAndSearchingFunctionalityTests" />
   </component>
 </project>
