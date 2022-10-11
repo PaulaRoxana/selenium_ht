@@ -86,14 +86,6 @@ public class FilterAndSearchingFunctionalityTests {
                 .until(ExpectedConditions.presenceOfElementLocated(assertionElementLocator));
         Assert.assertTrue(assertionElement.getText().equals("Price: Low to High"));
 
-//        List<WebElement> searchResultsAccordingToPrice = webDriver.findElements(searchResultsAccordingToPriceLocator);
-//        List<Integer> pricesSorted = searchResultsAccordingToPrice
-//                .stream()
-//                .filter(x -> x.getText() != "")
-//                .map(x -> Integer.parseInt(x.getText()))
-//                .sorted()
-//                .toList();
-//        Assert.assertEquals(pricesSorted.get(0), Integer.parseInt(searchResultsAccordingToPrice.get(0).getText()));
 
     }
     @AfterTest
