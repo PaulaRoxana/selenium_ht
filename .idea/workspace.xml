@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DeliverToFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SearchFieldFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliverToFunctionalityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SearchFieldFunctionalityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/webdriver/chromedriver.exe" afterDir="false" />
+    <list default="true" id="7fdcfb20-f9be-400c-bcb6-a21af21d1bf0" name="Changes" comment="commit FilterAndSearchingFunctionalityTests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HeadphonesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/modules/NavBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FilterAndSearchingPageObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2FiJFKxp4rWhC4swPcRl4e46Ho3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,17 +56,11 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paula_Girdea/IdeaProjects/selenium_ht/src/test&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Paula_Girdea\IdeaProjects\selenium_ht\src\test" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.SearchFieldFunctionalityTest">
-    <configuration name="DeliverToFunctionalityTest.verifyThatDeliverToValueIsUpdated" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest">
+    <configuration name="ASDeliverFunctionality.checkCountriesListContainsPoland" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +69,61 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliverToFunctionalityTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ASDeliverFunctionality" />
+      <option name="METHOD_NAME" value="checkCountriesListContainsPoland" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASDeliverFunctionality.checkShippingToCountry" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_ht" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ASDeliverFunctionality" />
+      <option name="METHOD_NAME" value="checkShippingToCountry" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASDeliverFunctionality.deliverToPoland" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_ht" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ASDeliverFunctionality" />
+      <option name="METHOD_NAME" value="deliverToPoland" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ASDeliverFunctionality.verifyThatDeliverToValueIsUpdated" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_ht" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ASDeliverFunctionality" />
       <option name="METHOD_NAME" value="verifyThatDeliverToValueIsUpdated" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -78,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchFieldFunctionalityTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_ht" />
       <extension name="coverage">
         <pattern>
@@ -87,61 +141,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SearchFieldFunctionalityTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchFieldFunctionalityTest.checkFoundElementsContainSearchedInfo" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_ht" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SearchFieldFunctionalityTest" />
-      <option name="METHOD_NAME" value="checkFoundElementsContainSearchedInfo" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchFieldFunctionalityTest.checkNoResultsForIncorrectInfoInSearchField" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_ht" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SearchFieldFunctionalityTest" />
-      <option name="METHOD_NAME" value="checkNoResultsForIncorrectInfoInSearchField" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchFieldFunctionalityTest.checkResultsForCorrectInfoInSearchField" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_ht" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SearchFieldFunctionalityTest" />
-      <option name="METHOD_NAME" value="checkResultsForCorrectInfoInSearchField" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FilterAndSearchingFunctionalityTests" />
+      <option name="METHOD_NAME" value="filteringAndSearchFunctionalityFirstTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -151,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchFieldFunctionalityTest" />
-        <item itemvalue="TestNG.DeliverToFunctionalityTest.verifyThatDeliverToValueIsUpdated" />
-        <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkFoundElementsContainSearchedInfo" />
-        <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkResultsForCorrectInfoInSearchField" />
-        <item itemvalue="TestNG.SearchFieldFunctionalityTest.checkNoResultsForIncorrectInfoInSearchField" />
+        <item itemvalue="TestNG.FilterAndSearchingFunctionalityTests.filteringAndSearchFunctionalityFirstTest" />
+        <item itemvalue="TestNG.ASDeliverFunctionality.checkShippingToCountry" />
+        <item itemvalue="TestNG.ASDeliverFunctionality.checkCountriesListContainsPoland" />
+        <item itemvalue="TestNG.ASDeliverFunctionality.verifyThatDeliverToValueIsUpdated" />
+        <item itemvalue="TestNG.ASDeliverFunctionality.deliverToPoland" />
       </list>
     </recent_temporary>
   </component>
@@ -182,12 +183,12 @@
       <option name="project" value="LOCAL" />
       <updated>1664969346989</updated>
     </task>
-    <task id="LOCAL-00003" summary="commit">
-      <created>1664969593690</created>
+    <task id="LOCAL-00003" summary="commit FilterAndSearchingFunctionalityTests">
+      <created>1665396469690</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1664969593690</updated>
+      <updated>1665396469690</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -206,7 +207,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit FilterAndSearchingFunctionalityTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit FilterAndSearchingFunctionalityTests" />
   </component>
 </project>
